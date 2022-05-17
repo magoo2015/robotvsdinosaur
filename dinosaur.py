@@ -1,12 +1,16 @@
 
 
+from robot import Robot
+
+
 class Dinosaur:
     
-    def __init__(self, name, attack_power):
-        self.name = name
-        self.attack_power = attack_power
-        health = 0
+    def __init__(self, name, attack_power, health):
+        self.name = "Ghangas Rex"
+        self.attack_power = 25
+        self.health = 100
 
     
     def attack(self, robot):
         pass
+        
