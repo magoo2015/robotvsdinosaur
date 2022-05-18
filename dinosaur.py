@@ -5,7 +5,7 @@ class Dinosaur:
     
     def __init__(self, name, attack_power, health):
         self.name = "Ghangas Rex"
-        self.attack_power = 25
+        self.attack_power = 15
         self.health = 100
         
 

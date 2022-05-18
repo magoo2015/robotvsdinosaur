@@ -1,5 +1,5 @@
 from weapon import Weapon
-from dinosaur import Dinosaur
+#from dinosaur import Dinosaur
 
 class Robot:
 
