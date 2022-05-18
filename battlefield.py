@@ -8,12 +8,14 @@ class Battlefield:
     def __init__(self):
         self.dinosaur = Dinosaur("Ghangas Rex", 15, 100)
         self.robot = Robot(100, "T1000 + 1")
+        
         pass
 
 
     def run_game(self):
         self.display_welcome()
         self.battle_phase()
+        self.display_winner()
         pass
 
 
@@ -24,11 +26,13 @@ class Battlefield:
 
 
     def battle_phase(self):
+        
 
         battle_on = True
 
         robot_health = self.robot.health
         dinosaur_health = self.dinosaur.health
+        winner = []
 
         while battle_on:
 
@@ -42,16 +46,20 @@ class Battlefield:
             
             if robot_health == 0:
                 print(f"{self.dinosaur.name} has defeated {self.robot.name}!")
+                winner = self.dinosaur.name
                 battle_on = False
             elif dinosaur_health == 0:
                 print(f"{self.robot.name} has returned {self.dinosaur.name} to the prehistoric era!")
+                winner = self.robot.name
                 battle_on = False
             else:
                 battle_on = True
-        
 
+
+        
         pass
 
     
     def display_winner(self):
+        print(f"{self.robot.name} is the winner!")
         pass
