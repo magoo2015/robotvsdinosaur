@@ -9,8 +9,10 @@ class Dinosaur:
         self.name = "Ghangas Rex"
         self.attack_power = 25
         self.health = 100
+        
 
     
     def attack(self, robot):
-        pass
+        print(f"{self.name} attacks {robot}")
+        
         

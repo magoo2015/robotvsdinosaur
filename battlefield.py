@@ -24,8 +24,12 @@ class Battlefield:
 
 
     def battle_phase(self):
-        print(f"{self.dinosaur.name} attacks {self.robot.name}")
-        print(f"Dinosaur health is: {self.dinosaur.health}")
+        health = self.robot.health
+
+        self.dinosaur.attack(self.robot.name)
+        health -= self.dinosaur.attack_power
+        print(health)
+        
 
         pass
 
