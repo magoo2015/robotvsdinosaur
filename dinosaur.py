@@ -1,7 +1,5 @@
 
 
-from robot import Robot
-
 
 class Dinosaur:
     

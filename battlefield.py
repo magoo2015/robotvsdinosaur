@@ -24,11 +24,17 @@ class Battlefield:
 
 
     def battle_phase(self):
-        health = self.robot.health
+        robot_health = self.robot.health
+        dinosaur_health = self.dinosaur.health
 
         self.dinosaur.attack(self.robot.name)
-        health -= self.dinosaur.attack_power
-        print(health)
+        robot_health -= self.dinosaur.attack_power
+        print(f"{self.robot.name} has {robot_health} remaining!")
+
+        self.robot.attack(self.dinosaur.name)
+        dinosaur_health -= self.robot.active_weapon.attack_power
+        print(f"{self.dinosaur.name} has {dinosaur_health} remaining!")
+        #dinosaur_health -= self.robot
         
 
         pass
