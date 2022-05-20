@@ -51,13 +51,11 @@ class Battlefield:
             
             if robot_health == 0:
                 print(f"{self.dinosaur.name} has defeated {self.robot.name}!")
-                print(f"{self.dinosaur.name}")
-                self.display_winner()
+                print(f"{self.dinosaur.name} is the winner!")
                 battle_on = False
             elif dinosaur_health == 0:
                 print(f"{self.robot.name} has returned {self.dinosaur.name} to the prehistoric era!")
-                print(f"{self.robot.name}")
-                self.display_winner()
+                print(f"{self.robot.name} is the winner!")
                 battle_on = False
             else:
                 battle_on = True
