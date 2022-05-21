@@ -48,7 +48,7 @@ class Battlefield:
             self.robot.attack(self.dinosaur.name)
             dinosaur_health -= self.robot.active_weapon.attack_power
             print(f"{self.dinosaur.name} has {dinosaur_health} remaining!")
-            
+            #Feel like this loop could be better.
             if robot_health == 0:
                 print(f"{self.dinosaur.name} has defeated {self.robot.name}!")
                 print(f"{self.dinosaur.name} is the winner!")
