@@ -15,7 +15,7 @@ class Battlefield:
     def run_game(self):
         self.display_welcome()
         self.battle_phase()
-        
+        self.display_winner()
         pass
 
 
@@ -49,13 +49,13 @@ class Battlefield:
             dinosaur_health -= self.robot.active_weapon.attack_power
             print(f"{self.dinosaur.name} has {dinosaur_health} remaining!")
             #Feel like this loop could be better.
-            if robot_health == 0:
+            if robot_health <= 0:
                 print(f"{self.dinosaur.name} has defeated {self.robot.name}!")
-                print(f"{self.dinosaur.name} is the winner!")
+                #print(f"{self.dinosaur.name} is the winner!") Commenting out since display winner function now works
                 battle_on = False
-            elif dinosaur_health == 0:
+            elif dinosaur_health <= 0:
                 print(f"{self.robot.name} has returned {self.dinosaur.name} to the prehistoric era!")
-                print(f"{self.robot.name} is the winner!")
+                #print(f"{self.robot.name} is the winner!")Commenting out since display winner function now works
                 battle_on = False
             else:
                 battle_on = True
@@ -63,5 +63,7 @@ class Battlefield:
 
     
     def display_winner(self):
-        print("is the winner!")
-        pass
+        if self.robot.health > 0:
+            print(f"{self.robot.name} is the winner!")
+        elif self.dinosaur.health > 0:
+            print(f"{self.dinosaur.name} is the winner!")
