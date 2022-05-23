@@ -15,7 +15,7 @@ class Battlefield:
     def run_game(self):
         self.display_welcome()
         self.battle_phase()
-        #self.display_winner()
+        
         pass
 
 
@@ -23,7 +23,7 @@ class Battlefield:
     def display_welcome(self):
         print("""
         *********************************************************
-        Welcome to the battle of the century!  Robot Vs. Dinosaur
+        Welcome to the Battle of the Century!  Robot Vs. Dinosaur
         *********************************************************
         """
         )
@@ -37,7 +37,7 @@ class Battlefield:
 
         robot_health = self.robot.health
         dinosaur_health = self.dinosaur.health
-       # winner = self.display_winner()
+       
 
         while battle_on:
 
@@ -59,9 +59,6 @@ class Battlefield:
                 battle_on = False
             else:
                 battle_on = True
-
-
-        
         pass
 
     
